@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Star Park</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="form-card">
+            <div class="logo-container">
+                <img src="logohori 1.png" alt="">
+            </div>
+            <div class="seleccion-container">
+
+                <img src="dominic 1.png" width="350px" alt="">
+                <div class="button-selection">
+                    <a href="completed.html"><button type="submit" id="completed" class="btn-register">
+                        Registro completo
+                    </button>
+                    </a>
+                    <a href="parcial.html"><button type="submit" class="btn-register">
+                        Registro Parcial
+                    </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="success-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="check-circle">
+                &#10003;
+            </div>
+            <h2>Usuario creado</h2>
+            <br>
+            <h2>Exitosamente</h2>
+            <button class="btn-confirmar"
+                onclick="document.getElementById('success-modal').classList.add('hidden')">Confirmar</button>
+        </div>
+    </div>
+
+    <script>
+       const idTemporizador = setTimeout(() => {
+            window.location.href = "index.html";
+        }, 6000);
+
+        
+        document.getElementById("completed").addEventListener("click", () => {
+            
+            clearTimeout(idTemporizador);
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Park</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <div class="main-container">
+        <div class="form-card">
+            <div class="logo-container">
+                <img src="logohori 1.png" alt="">
+            </div>
+            <form class="register-form">
+
+                <div class="two-column">
+                    <div class="input-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" required id="nombre" placeholder="Example">
+                    </div>
+                    <div class="input-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" required id="apellido" placeholder="Example">
+                    </div>
+                </div>
+
+                <div class="input-group full-width">
+                    <label for="whatsapp">Número de whatsapp</label>
+                    <input type="tel" required id="whatsapp" placeholder="Ej: 3256956341">
+                </div>
+
+                <div class="input-group full-width">
+                    <label for="documento">Número de documento</label>
+                    <input type="number" required id="documento" placeholder="Ej: 10258794">
+                </div>
+                <div class="acciones">
+                    <a href="formulario.html"><button type="button" class="btn-register">Regresar</button></a>
+                    <button type="submit" class="btn-register">Registrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="success-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="check-circle">
+                &#10003;
+            </div>
+            <h2>Usuario creado</h2>
+            <br>
+            <h2>Exitosamente</h2>
+            <button class="btn-confirmar"
+                onclick="document.getElementById('success-modal').classList.add('hidden')">Confirmar</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.register-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            document.getElementById('success-modal').classList.remove('hidden');
+        });
+
+
+        const idTemporizador = setTimeout(() => {
+            window.location.href = "index.html";
+        }, 60000);
+
+        
+        document.getElementById("nombre").addEventListener("click", () => {
+            
+            clearTimeout(idTemporizador);
+        });
+
+    </script>
+</body>
+
+</html>

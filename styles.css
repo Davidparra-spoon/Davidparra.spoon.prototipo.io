@@ -1,0 +1,53 @@
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+       
+        transform: translateY(-30px);
+    }
+    60% {
+        
+        transform: translateY(-15px);
+    }
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; 
+}
+body{
+    background:  linear-gradient(20deg, #07075E, #0F0EC4);
+}
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    flex-direction: column;
+    
+    
+}
+h2{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+.main-container img {
+    animation: bounce 1.5s ease-in-out infinite;
+    width: 500px;
+}
+
+
+@media (max-width: 600px) {
+    .form-card {
+        padding: 30px 20px;
+    }
+
+    .two-column {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Park</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+
+    <div class="main-container">
+        <div class="form-card">
+            <div class="logo-container">
+                <img src="logohori 1.png" alt="">
+            </div>
+            <form class="register-form">
+
+                <div class="two-column">
+                    <div class="input-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" required id="nombre" placeholder="Example">
+                    </div>
+                    <div class="input-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" required id="apellido" placeholder="Example">
+                    </div>
+                </div>
+
+                <div class="input-group full-width">
+                    <label for="whatsapp">Número de whatsapp</label>
+                    <input type="tel" required id="whatsapp" placeholder="Ej: 3256956341">
+                </div>
+
+                <div class="display-flex flex-1">
+                    <div class="flex flex-wrap gap-4 mb-5 rounded-none border-none">
+                        <div class="flex-1">
+                            <label for="identificacion"
+                                class="block mb-2 text-sm font-medium text-gray-900">Identificación</label>
+                            <input required type="text" id="identificacion"
+                                class="border-b border-gray-300 text-gray-900 text-sm block w-full p-2.5 focus:outline-none focus:border-blue-500 bg-transparent"
+                                placeholder="Ej: 213232123" />
+                        </div>
+
+                        <div class="flex-1">
+                            <label for="tipo_documento" class="block mb-2 text-sm font-medium text-gray-900 ">Tipo
+                                de
+                                Documento</label>
+                            <select required  id="tipo_documento"
+                                class="border-b border-gray-300 text-gray-900 text-sm block w-full p-2.5 focus:outline-none focus:border-blue-500 bg-transparent">
+                                <option value="">Selecciona el tipo</option>
+                                <option value="CC">CC</option>
+                                <option value="CE">CE</option>
+                                <option value="PS">PS</option>
+                                <option value="CE">TI</option>
+                                <option value="PS">NIT</option>
+                            </select>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group full-width">
+                    <label for="whatsapp">Correo Electronico</label>
+                    <input type="email" id="whatsapp" placeholder="Ej: ejemplo@correo.com">
+                </div>
+
+                <div class="input-group full-width">
+                    <label for="documento">Dirección</label>
+                    <input type="text"  id="documento" placeholder="Ej: Calle Falsa 123">
+                </div>
+                <div class="acciones">
+                    <a href="formulario.html"><button type="button" class="btn-register">Regresar</button></a>
+                    <button type="submit" class="btn-register">Registrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="success-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="check-circle">
+                &#10003;
+            </div>
+            <h2>Usuario creado</h2>
+            <br>
+            <h2>Exitosamente</h2>
+            <button class="btn-confirmar"
+                onclick="document.getElementById('success-modal').classList.add('hidden')">Confirmar</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.register-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            document.getElementById('success-modal').classList.remove('hidden');
+        });
+
+        const idTemporizador = setTimeout(() => {
+            window.location.href = "index.html";
+        }, 60000);
+
+        
+        document.getElementById("nombre").addEventListener("click", () => {
+            
+            clearTimeout(idTemporizador);
+        });
+
+    </script>
+</body>
+
+</html>
