@@ -213,7 +213,7 @@
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 1280px) {
     .form-card {
         padding: 30px 20px;
     }
